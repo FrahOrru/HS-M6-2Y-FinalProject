@@ -1,6 +1,6 @@
 function HomeScreen() {
   return (
-    <div className="h-screen w-screen home-screen bg-homescreen">
+    <div className="h-screen home-screen bg-homescreen">
       <div className="frame bg-transparent border border-black">
         <h1>History</h1>
       </div>

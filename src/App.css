@@ -14,9 +14,10 @@
   margin: 0 auto;
   padding: 0;
   text-align: center;
+  font-family: 'Lavoza';
 }
 
-.bg-homescreen {
+.bg-general {
   background-color: #e5e1de;
 }
 
@@ -33,11 +34,6 @@
   justify-content: center;
   align-items: center;
 }
-.frame h1 {
-  font-family: 'Lavoza';
-  font-size: 250px;
-  z-index: 10;
-}
 
 .image-statue {
   position: absolute;
@@ -48,6 +44,11 @@
   z-index: 0;
 }
 
-.about-screen {
-  background-color: #88817c;
+h1 {
+  font-size: 250px;
+  z-index: 10;
+}
+
+h2 {
+  font-size: 80px;
 }
