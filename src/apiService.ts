@@ -1,5 +1,4 @@
 export async function fetchData(text: string) {
-  console.log(import.meta.env.SECRET_KEY)
   try {
     const response = await fetch(
       `https://api.api-ninjas.com/v1/historicalevents?text=${text}`,
