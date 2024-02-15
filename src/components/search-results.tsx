@@ -13,23 +13,26 @@ function SearchResults({ data, onChangePage, currentPage }: any) {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center gap-y-8">
-      <div className="evenElements flex gap-x-8 w-full justify-around">
-        {evenElements(data).map((item: any, index: any) => (
-          <EventCard event={item} key={index} direction="down"></EventCard>
-        ))}
-      </div>
+    <>
+      <div className="flex flex-col justify-center items-center gap-y-8 search-results">
+        <div className="evenElements flex gap-x-8 w-full justify-around">
+          {evenElements(data).map((item: any, index: any) => (
+            <EventCard event={item} key={index} direction="down"></EventCard>
+          ))}
+        </div>
 
-      <div className="time-line"></div>
+        <div className="time-line"></div>
 
-      <div className="oddElements flex gap-x-8 w-full justify-around">
-        {oddElements(data).map((item: any, index: any) => (
-          <EventCard event={item} key={index} direction="up"></EventCard>
-        ))}
+        <div className="oddElements flex gap-x-8 w-full justify-around">
+          {oddElements(data).map((item: any, index: any) => (
+            <EventCard event={item} key={index} direction="up"></EventCard>
+          ))}
+        </div>
       </div>
       <div className="flex w-full justify-center gap-x-4">
         <FaRegArrowAltCircleLeft
           size={32}
+          data-testid="left-arrow"
           color={currentPage === 1 ? '#000' : '#C1BDBD'}
           className={currentPage === 1 ? 'cursor-pointer' : ''}
           onClick={currentPage === 1 ? onChangePage : null}
@@ -37,12 +40,13 @@ function SearchResults({ data, onChangePage, currentPage }: any) {
 
         <FaRegArrowAltCircleRight
           size={32}
+          data-testid="right-arrow"
           color={currentPage === 0 ? '#000' : '#C1BDBD'}
           className={currentPage === 0 ? 'cursor-pointer' : ''}
           onClick={currentPage === 0 ? onChangePage : null}
         />
       </div>
-    </div>
+    </>
   )
 }
 
